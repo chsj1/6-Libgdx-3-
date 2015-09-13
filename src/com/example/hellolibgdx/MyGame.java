@@ -22,8 +22,8 @@ public class MyGame implements ApplicationListener {
 	
 	@Override
 	public void create() {
-		texture = new Texture(Gdx.files.internal("data/test1.jpg"));
-		region = new TextureRegion(texture);
+		texture = new Texture(Gdx.files.internal("data/feiji.png"));
+		region = new TextureRegion(texture,70,0,60,60);
 		sprite = new Sprite(region);
 		sprite.setPosition(200, 200);//设置位置
 //		sprite.setColor(Color.BLUE);//设置颜色
@@ -32,7 +32,7 @@ public class MyGame implements ApplicationListener {
 //		sprite.setOrigin(sprite.getWidth()/2, sprite.getHeight()/2);
 		sprite.setOrigin(0, 0);//设置锚点,旋转的时候需要用到.一般和setRotation一起使用.这里的锚点是相对于自己的坐标
 //		sprite.setOrigin(sprite.getX(), sprite.getY());
-		sprite.setSize(256, 256);//设置大小
+//		sprite.setSize(256, 256);//设置大小
 		
 		batch = new SpriteBatch();
 	}
@@ -54,7 +54,8 @@ public class MyGame implements ApplicationListener {
 	
 	@Override
 	public void render() {
-		Gdx.gl.glClearColor(1, 1, 1, 1);// 设置背景为白色
+//		Gdx.gl.glClearColor(1, 1, 1, 1);// 设置背景为白色
+		Gdx.gl.glClearColor(0, 0, 0, 1);// 设置背景为黑色
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);// 清屏
 		
 		
